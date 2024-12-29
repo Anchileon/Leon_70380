@@ -18,11 +18,11 @@ const server = app.listen(PORT, () => {
     console.log("Server on port", PORT)
 })
 
-await mongoose.connect("mongodb+srv://franciscopugh01:@cluster0.uwgbn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+await mongoose.connect("mongodb+srv://ignacioleon24:<db_password>@cluster0.hks8w.mongodb.net/")
 .then(() => console.log("BDD conectada"))
 .catch((e) => console.log("Error al conectar con bdd: ", e))
 
-
+//Inicializo Socket.io
 const io = new Server(server)
 //Middlewares de aplicacion
 app.use(express.json())
